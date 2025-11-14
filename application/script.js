@@ -46,5 +46,5 @@ function sendMail(e) {
 // download CV (this assumes you will place Ahmad_Jawad_PHP.pdf in repo root or assets)
 function downloadCV() {
   // If you upload CV into repo (assets/Ahmad_Jawad_PHP.pdf), change path accordingly
-  window.open("assets/resume/Ahmad_Jawad_PHP.pdf", "_blank");
+  window.open("../assets/resume/Ahmad_Jawad_PHP.pdf", "_blank");
 }
