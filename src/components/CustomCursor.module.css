@@ -1,0 +1,54 @@
+.cursor {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: width 0.35s var(--ease-out-expo),
+              height 0.35s var(--ease-out-expo),
+              top 0.35s var(--ease-out-expo),
+              left 0.35s var(--ease-out-expo),
+              opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: difference;
+  will-change: transform;
+}
+
+.expanded {
+  width: 90px;
+  height: 90px;
+  top: -45px;
+  left: -45px;
+  mix-blend-mode: normal;
+  background: var(--color-accent);
+}
+
+.text {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent-contrast);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+@media (max-width: 768px) {
+  .cursor {
+    display: none !important;
+  }
+}
+
+@media (pointer: coarse) {
+  .cursor {
+    display: none !important;
+  }
+}
